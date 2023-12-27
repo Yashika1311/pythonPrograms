@@ -1,14 +1,29 @@
-#to check if two strings are anagrams of each other
+class LibraryItem:
+    library_items = []
 
-str1=input("enter the first string:")
-str2=input("enter the second string:")
+    def _init_(self, item_type, item_name, item_id, item_count=0):
+        self.item_type = item_type
+        self.item_name = item_name
+        self.item_id = item_id
+        self.item_count = item_count
 
-for i in str1:
-    if i in str2:
-        continue
-    else:
-      print("its not the anagram")
-      exit()
+        item_data = {
+            'item_type': self.item_type,
+            'item_name': self.item_name,
+            'item_id': self.item_id,
+            'item_count': self.item_count
+        }
 
-print("Its the anagram")
+        if self.item_type == 'book':
+            self.author_name = input("Enter author's name for the book: ")
+            item_data['author_name'] = self.author_name
+        elif self.item_type == 'journal':
+            self.publisher_name = input("Enter publisher's name for the journal: ")
+            item_data['publisher_name'] = self.publisher_name
+        elif self.item_type == 'dvd':
+            self.director_name = input("Enter director's name for the DVD: ")
+            item_data['director_name'] = self.director_name
+        else:
+            raise ValueError("Invalid item_type. Please retry with 'book', 'journal', or 'dvd'.")
 
+        self.library_items.append(item_data)

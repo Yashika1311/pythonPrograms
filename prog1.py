@@ -1,26 +1,17 @@
-#To count no of vowels in given string considering uppercase and lower case
+#Design a library catalogue system using inheritance. take base class library item and derieved classes book, dvd and journal. each derived class should have unique attributes and methohds and system should support checking in nd checking out System.
 
-# vowel = ["A","E","I","O","U"]
+class library:
+    def __init__(self,title,book_no,copies):
+        self.title=title
+        self.book_no=book_no
+        self.copies=copies
+        self.checked_out_copies=0
 
-# a = input("Enter the word : ").upper()
+def book(library):
+     def __init__(self, title, book_no,copies, author):
+           super().__init__(title, book_no, copies)
+           self.author = author
 
-# count = 0
 
-# for i in a:
-#     if a.upper() in vowel:
-#         count+=1
-    
-# print(count)
 
-a = input("Enter a word: ").upper()
-
-count = 0
-
-vowels = set("AEIOU")
-
-for char in a:
-    if char in vowels:
-        count += 1
-
-print("Number of vowels: ", count)
-
+       
