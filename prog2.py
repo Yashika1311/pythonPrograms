@@ -1,31 +1,9 @@
-# Python program to remove empty tuples from a
-# list of tuples function to remove empty tuples
-# using len()
+#take sentence as input and count no of words in it
 
-#tuples = [(), ('ram', '15', '8'), (), ('laxman', 'sita'),
-		#('krishna', 'akbar', '45'), ('', ''), ()]
+sentence = input("Enter a sentence: ")
 
-#def Remove(tuples):
-	#for i in tuples:
-		#if(len(i) == 0):
-			#tuples.remove(i)
-	#return tuples
+words = sentence.split()
 
-num = [('1','2','3'),(),('2','5')]
-#  newlist = []
+count = len(words)
 
-for x in num:
-  if num!=():
-     num.append(x)
-
-print(num)
-
-
-
-
-
-#print(Remove(tuples))
-
-
-
-
+print("Number of words in the sentence: ", count)
